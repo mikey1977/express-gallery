@@ -1,8 +1,27 @@
-h1 {
+#title {
+  font-size: 40px;
+  display: inline-block;
   color: #736E74;
+  float: left;
 }
 
-p {
+#words {
+  display: inline-block;
   width: 300px;
   color: #736E74;
+  float: right;
+}
+
+#mainImage {
+  width : 80%;
+  display: block;
+  margin: auto;
+}
+
+.otherImages {
+  width: 30%;
+  height: 300px;
+  display: inline-block;
+  margin: 10px;
+  border: 2px solid black;
 }
