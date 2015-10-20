@@ -18,6 +18,9 @@ app.get('/', function (req, res) {
   });
 });
 
+app.delete('/user/gallery/:id', function (req, res) {
+  res.send('DELETE photo by id');
+})
 
 var server = app.listen(3000, function() {
   var host = server.address().address;

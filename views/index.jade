@@ -1,1 +1,35 @@
 include ./layouts/mainLayout
+
+block content
+
+  form(method='GET' action='/users')
+      input(type='submit' value='View Gallery')
+
+  form(name='textInput' method='GET' action='/users/gallery/:id')
+      input(type='submit' value='Search Photos')
+
+  form(method='GET' action='/users/gallery/new')
+    label(for='username-field')
+      input#author(placeholder='Author Name')
+      input#link(placeholder='Link URL')
+      input#description(placeholder='Description')
+      input(type='submit' value='New Photos')
+
+  form(method='POST' action='/users/gallery')
+      input(type='submit' value='Create New Photo')
+
+  form(name='textInput' method='GET' action='/users/gallery/:id/edit')
+    label(for='username-field')
+      input#author(placeholder='Author Name')
+      input#link(placeholder='Link URL')
+      input#description(placeholder='Description')
+      input(type='submit' value='Edit a Photo')
+
+  form(method='PUT' action='/users/gallery/:id')
+      input(type='submit' value='Update Photo')
+
+  form(method='DELETE' action='/users/gallery/:id')
+      input(type='submit' value='Delete Photo')
+
+
+
