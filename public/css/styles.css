@@ -1,3 +1,4 @@
+/* line 1, stdin */
 #title {
   font-size: 50px;
   display: inline-block;
@@ -5,52 +6,51 @@
   float: left;
   margin-left: 100px;
   font-family: "Helvetica";
-  font-weight: bold;
-}
+  font-weight: bold; }
 
+/* line 11, stdin */
 #words {
   display: inline-block;
   width: 400px;
   color: #736E74;
   float: right;
   margin-right: 100px;
-  margin-top: 50px;
-}
+  margin-top: 50px; }
 
+/* line 20, stdin */
 #mainImage {
-  width : 90%;
+  width: 90%;
   display: block;
   margin: auto;
-  margin-bottom: 30px;
-}
+  margin-bottom: 30px; }
 
+/* line 27, stdin */
 .otherImages {
-  width: 30%;
+  width: 90%;
   height: 300px;
   display: inline-block;
   margin: 10px;
   margin-top: 20px;
-  border: 2px solid black;
-}
+  border: 2px solid black; }
 
+/* line 36, stdin */
 .button {
   width: 120px;
-  text-align: center;
-}
+  text-align: center; }
 
+/* line 41, stdin */
 .descripts {
   color: red;
-  width: 30%;
-  margin: 10px;
-}
+  width: 90%;
+  margin: 10px; }
 
+/* line 47, stdin */
 .imagecontainer {
   display: inline-block;
-  width: 100%;
+  width: 30%; }
 
-}
-
+/* line 52, stdin */
 .auths {
+  width: 90%;
   color: green;
-  margin: 10px;
-}
+  margin: 10px; }

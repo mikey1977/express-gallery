@@ -27,7 +27,7 @@ app.get('/', function (req, res) {
       id : 2,
       image : "http://www.planungsbueroklee.de/typo3temp/pics/Architekt_bdfb3f3ad9.jpg",
       description : "Need someone to draw up some blueprints?  Here's your gal",
-      author : "Whiskey McWhiskey"
+      author : "Whiskey McWhiskeypher"
     },
     {
       id : 3,
