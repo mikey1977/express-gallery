@@ -2,6 +2,8 @@ include ./layouts/mainLayout
 
 block content
 
+  //- +generateImages(galleryimages)
+
   form(name='textInput' method='GET' action='/gallery/new')
     label(for='username-field')
     input.author(placeholder='Author Name')
@@ -12,6 +14,8 @@ block content
 
   form(name='textInput' method='GET' action='/')
     input.button(type='submit' value='Home')
+
+
 
   //- h1 Hello
   //-   input(type='text' placeholder='author name')

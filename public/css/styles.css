@@ -29,28 +29,31 @@
   width: 90%;
   height: 300px;
   display: inline-block;
-  margin: 10px;
-  margin-top: 20px;
+  margin: auto;
   border: 2px solid black; }
 
-/* line 36, stdin */
+/* line 37, stdin */
 .button {
   width: 120px;
   text-align: center; }
 
-/* line 41, stdin */
+/* line 42, stdin */
 .descripts {
   color: red;
   width: 90%;
-  margin: 10px; }
+  margin: 10px;
+  text-decoration: none; }
 
-/* line 47, stdin */
+/* line 49, stdin */
 .imagecontainer {
+  height: 30%;
+  margin: auto;
   display: inline-block;
   width: 30%; }
 
-/* line 52, stdin */
+/* line 56, stdin */
 .auths {
   width: 90%;
   color: green;
-  margin: 10px; }
+  margin: 10px;
+  text-decoration: none; }
