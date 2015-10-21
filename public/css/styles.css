@@ -1,21 +1,27 @@
 #title {
-  font-size: 40px;
+  font-size: 50px;
   display: inline-block;
   color: #736E74;
   float: left;
+  margin-left: 100px;
+  font-family: "Helvetica";
+  font-weight: bold;
 }
 
 #words {
   display: inline-block;
-  width: 300px;
+  width: 400px;
   color: #736E74;
   float: right;
+  margin-right: 100px;
+  margin-top: 50px;
 }
 
 #mainImage {
-  width : 80%;
+  width : 90%;
   display: block;
   margin: auto;
+  margin-bottom: 30px;
 }
 
 .otherImages {
@@ -23,5 +29,11 @@
   height: 300px;
   display: inline-block;
   margin: 10px;
+  margin-top: 20px;
   border: 2px solid black;
+}
+
+.button {
+  width: 120px;
+  text-align: center;
 }

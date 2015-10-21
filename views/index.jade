@@ -1,35 +1,65 @@
 include ./layouts/mainLayout
 
 block content
+  p#title _ARCHITEKT
 
-  form(method='GET' action='/users')
-      input(type='submit' value='View Gallery')
+  p#words.
+    Welcome to our online portfolio, we are a small group
+    of passionate designers and architects, looking to
+    change and create amazing digital images to
+    inspire others to follow in our innovative steps.  Free
+    Architect WordPress Theme
 
-  form(name='textInput' method='GET' action='/users/gallery/:id')
-      input(type='submit' value='Search Photos')
+  div#firstRow
 
-  form(name='textInput' method='GET' action='/users/gallery/new')
-    label(for='username-field')
-      input#author(placeholder='Author Name')
-      input#link(placeholder='Link URL')
-      input#description(placeholder='Description')
-      input(type='submit' value='New Photos')
+    img(src="http://www.architekt-euteneuer.de/fileadmin/images/startseite_slider/startseite_2.jpg" id="mainImage")
 
-  form(method='POST' action='/users/gallery')
-      input(type='submit' value='Create New Photo')
+    a(href="/gallery/:id/edit"): img(src="http://witze.net/architekt.gif" class="otherImages")
 
-  form(name='textInput' method='GET' action='/users/gallery/:id/edit')
-    label(for='username-field')
-      input#author(placeholder='Author Name')
-      input#link(placeholder='Link URL')
-      input#description(placeholder='Description')
-      input(type='submit' value='Edit a Photo')
+    a(href="/gallery/:id/edit"): img(src="http://www.planungsbueroklee.de/typo3temp/pics/Architekt_bdfb3f3ad9.jpg" class="otherImages")
 
-  form(method='PUT' action='/users/gallery/:id')
-      input(type='submit' value='Update Photo')
+    a(href="/gallery/:id/edit"): img(src="http://cliparts.co/cliparts/riL/n5K/riLn5Ko4T.png" class="otherImages")
 
-  form(method='DELETE' action='/users/gallery/:id')
-      input(type='submit' value='Delete Photo')
+  div#secondRow
+
+    a(href="/gallery/:id/edit"): img(src="http://www.clipartlord.com/wp-content/uploads/2013/01/house2.png" class="otherImages")
+
+    a(href="/gallery/:id/edit"): img(src="http://wackymania.com/image/2011/3/real-house-inspired-by-cartoons/real-house-inspired-by-cartoons-02.jpg" class="otherImages")
+
+    a(href="/gallery/:id/edit"): img(src="http://www.how-to-draw-funny-cartoons.com/image-files/cartoon-house-008.jpg" class="otherImages")
+
+
+  //- form(name='textInput' method='GET' action='/gallery/new')
+  //-   input.button(type='submit' value='New Photos')
+  //- form(method='GET' action='/gallery')
+  //-     input.button(type='submit' value='View Gallery')
+
+  //- form(name='textInput' method='GET' action='/gallery/:id')
+  //-     input.button(type='submit' value='Search Photos')
+
+  //- form(method='POST' action='/gallery')
+  //-     input.button(type='submit' value='Create New Photo')
+
+  //- form(method='PUT' action='/gallery/:id')
+  //-     input.button(type='submit' value='Update Photo')
+
+  //- form(method='DELETE' action='/gallery/:id')
+  //-     input.button(type='submit' value='Delete Photo')
+
+  //- form(name='textInput' method='GET' action='/gallery/new')
+  //-   label(for='username-field')
+  //-     input.author(placeholder='Author Name')
+  //-     input.ink(placeholder='Link URL')
+  //-     input.description(placeholder='Description')
+      //- input.button(type='submit' value='New Photos')
+
+  //- form(name='textInput' method='GET' action='/gallery/:id/edit')
+  //-   label(for='username-field')
+  //-     input.author(placeholder='Author Name')
+  //-     input.link(placeholder='Link URL')
+  //-     input.description(placeholder='Description')
+  //-     input.button(type='submit' value='Edit a Photo')
+
 
 
 

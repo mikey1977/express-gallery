@@ -1,0 +1,20 @@
+include ./layouts/mainLayout
+
+block content
+
+  form(name='textInput' method='GET' action='/gallery/new')
+  label(for='username-field')
+    input.author(placeholder='Author Name')
+    input.link(placeholder='Link URL')
+    input.description(placeholder='Description')
+    input.button(type='submit' value='New Photos')
+
+
+  form(name='textInput' method='GET' action='/')
+    input.button(type='submit' value='Home')
+
+  //- h1 Hello
+  //-   input(type='text' placeholder='author name')
+  //-   input(type='text' placeholder='URL')
+  //-   input(type='text' placeholder='description')
+  //-   input(type='submit' value='new photos' href='/gallery/new')

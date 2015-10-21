@@ -1,0 +1,10 @@
+include ./layouts/mainLayout
+
+block content
+
+  form(name='textInput' method='GET' action='/gallery/new')
+    label(for='username-field')
+      input.author(placeholder='Author Name')
+      input.ink(placeholder='Link URL')
+      input.description(placeholder='Description')
+      input.button(type='submit' value='New Photos')
