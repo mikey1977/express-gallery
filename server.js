@@ -34,6 +34,24 @@ app.get('/', function (req, res) {
       image : "http://cliparts.co/cliparts/riL/n5K/riLn5Ko4T.png",
       description : "Oooooooooooooh, look at this beautiful house!  It's so much awesome!",
       author : "Bourbie McBourbon"
+    },
+    {
+      id : 4,
+      image : "http://www.clipartlord.com/wp-content/uploads/2013/01/house2.png",
+      description : "Don't you want to live in a red house with 4 windows, AND a green roof?",
+      author : "Vodki Vodkarov"
+    },
+    {
+      id : 5,
+      image : "http://wackymania.com/image/2011/3/real-house-inspired-by-cartoons/real-house-inspired-by-cartoons-02.jpg",
+      description : "Beautiful house in Springfield for sale.  Free beer included",
+      author : "Ginny Ginweather"
+    },
+    {
+      id : 6,
+      image : "http://www.how-to-draw-funny-cartoons.com/image-files/cartoon-house-008.jpg",
+      description : "Happy happy happy happy happy happy happy happy happy happy house!",
+      author : "Jeff"
     }]
   });
 });

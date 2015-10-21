@@ -1,3 +1,11 @@
 mixin generateImages(galleryimages)
   each galleryimage in galleryimages
-    img(src= galleryimage.image class="otherImages")
+    div.imagecontainer
+      a(href="/gallery/:id/edit")
+        img(src= galleryimage.image class="otherImages")
+        p.descripts= galleryimage.description
+        p.auths= galleryimage.author
+
+//- mixin generateImageses(galleryimagerows)
+//-   each galleryimagerow in galleryimagerows
+//-     img(src= galleryimagerows.image class="otherImages")
