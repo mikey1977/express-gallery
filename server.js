@@ -15,7 +15,26 @@ app.use('/gallery', gallery);
 app.get('/', function (req, res) {
 
   res.render('index', {
-    title : '_ARCHITEKT'
+    title : '_ARCHITEKT',
+    galleryimages : [
+    {
+      id : 1,
+      image : "http://witze.net/architekt.gif",
+      description : "This dude likes his blueprints, sometimes too much...don't ask",
+      author : "Scotchy McScotherson"
+    },
+    {
+      id : 2,
+      image : "http://www.planungsbueroklee.de/typo3temp/pics/Architekt_bdfb3f3ad9.jpg",
+      description : "Need someone to draw up some blueprints?  Here's your gal",
+      author : "Whiskey McWhiskey"
+    },
+    {
+      id : 3,
+      image : "http://cliparts.co/cliparts/riL/n5K/riLn5Ko4T.png",
+      description : "Oooooooooooooh, look at this beautiful house!  It's so much awesome!",
+      author : "Bourbie McBourbon"
+    }]
   });
 });
 

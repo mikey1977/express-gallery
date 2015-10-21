@@ -1,5 +1,7 @@
 include ./layouts/mainLayout
 
+include ./mixins
+
 block content
   p#title _ARCHITEKT
 
@@ -10,23 +12,25 @@ block content
     inspire others to follow in our innovative steps.  Free
     Architect WordPress Theme
 
+
   div#firstRow
 
     img(src="http://www.architekt-euteneuer.de/fileadmin/images/startseite_slider/startseite_2.jpg" id="mainImage")
 
-    a(href="/gallery/:id/edit"): img(src="http://witze.net/architekt.gif" class="otherImages")
+  +generateImages(galleryimages)
+  //-   a(href="/gallery/1/edit"): img(src="http://witze.net/architekt.gif" class="otherImages")
 
-    a(href="/gallery/:id/edit"): img(src="http://www.planungsbueroklee.de/typo3temp/pics/Architekt_bdfb3f3ad9.jpg" class="otherImages")
+  //-   a(href="/gallery/2/edit"): img(src="http://www.planungsbueroklee.de/typo3temp/pics/Architekt_bdfb3f3ad9.jpg" class="otherImages")
 
-    a(href="/gallery/:id/edit"): img(src="http://cliparts.co/cliparts/riL/n5K/riLn5Ko4T.png" class="otherImages")
+  //-   a(href="/gallery/3/edit"): img(src="http://cliparts.co/cliparts/riL/n5K/riLn5Ko4T.png" class="otherImages")
 
-  div#secondRow
+  //- div#secondRow
 
-    a(href="/gallery/:id/edit"): img(src="http://www.clipartlord.com/wp-content/uploads/2013/01/house2.png" class="otherImages")
+  //-   a(href="/gallery/4/edit"): img(src="http://www.clipartlord.com/wp-content/uploads/2013/01/house2.png" class="otherImages")
 
-    a(href="/gallery/:id/edit"): img(src="http://wackymania.com/image/2011/3/real-house-inspired-by-cartoons/real-house-inspired-by-cartoons-02.jpg" class="otherImages")
+  //-   a(href="/gallery/5/edit"): img(src="http://wackymania.com/image/2011/3/real-house-inspired-by-cartoons/real-house-inspired-by-cartoons-02.jpg" class="otherImages")
 
-    a(href="/gallery/:id/edit"): img(src="http://www.how-to-draw-funny-cartoons.com/image-files/cartoon-house-008.jpg" class="otherImages")
+  //-   a(href="/gallery/6/edit"): img(src="http://www.how-to-draw-funny-cartoons.com/image-files/cartoon-house-008.jpg" class="otherImages")
 
 
   //- form(name='textInput' method='GET' action='/gallery/new')
