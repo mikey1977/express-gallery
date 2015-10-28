@@ -6,7 +6,9 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods : {
       associate : function(models) {
-        Posts.belongsTo(models.User);
+        Posts.belongsTo(models.User, {
+          onDelete: "CASCADE"
+        });
       }
     }
   });

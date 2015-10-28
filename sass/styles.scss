@@ -1,14 +1,14 @@
 @import "partials/reset";
 @import "partials/clearfix";
 
-$small: "only screen and (max-width: 800px)";
-$large: "only screen and (min-width: 801px)";
+$small: "only screen and (max-width:800px)";
+$large: "only screen and (min-width:801px)";
 
-// body {
-//   text-align: center;
-//   box-sizing: border-box;
-//   margin: auto;
-// }
+body {
+  // text-align: center;
+  // box-sizing: border-box;
+  margin: auto;
+}
 
 #title {
   font-size: 50px;
@@ -36,54 +36,51 @@ $large: "only screen and (min-width: 801px)";
   margin-bottom: 30px;
 }
 
-.otherImages {
-  width: 90%;
-  height: 90%;
-  display: inline-block;
-  box-sizing: border-box;
-  text-align: center;
-  margin: auto;
-  // margin: 10px;
-  // margin-top: 20px;
-  border: 2px solid black;
-}
-
 .button {
   width: 120px;
   text-align: center;
 }
 
-.descripts {
-  color: red;
-  // width: 90%;
-  // margin: 10px;
-  // text-decoration: none;
-}
+.allImages {
+  width: 100%;
+  // box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+  // margin-left: auto;
+  // margin-right: auto;
 
-.imagecontainer {
+  .imagecontainer {
 
-  box-sizing: border-box;
-  border: 3px solid blue;
-  display: inline-block;
+    // box-sizing: border-box;
+    border: 3px solid blue;
+    // display: inline-block;
 
-  @media #{$small}{
+    .descripts {
+      color: red;
+      margin: auto;
+      height: 90%;
+      // margin: auto;
+      max-width: 90%;
+      min-width: 90%;
+      // width: 90%;
+      // margin: 10px;
+      // text-decoration: none;
+    }
+
+    .auths {
+      // width: 90%;
+      color: green;
+      margin: auto;
+      // margin: 10px;
+      // text-decoration: none;
+    }
 
 
-  height: 90%;
-  margin: auto;
-  max-width: 90%;
-  min-width: 90%;
+    @media #{$large}{
+      // height: 30%;
+      // margin: auto;
+      max-width: 30%;
+      min-width: 30%;
+    }
   }
-  @media #{$large}{
-    // height: 30%;
-    max-width: 30%;
-    min-width: 30%;
-  }
-}
-
-.auths {
-  // width: 90%;
-  color: green;
-  // margin: 10px;
-  // text-decoration: none;
 }

@@ -55,34 +55,37 @@ router.post('/', function (req, res) {
 
 // :id can mean anything
 router.get('/:id', function (req, res) {
-  Posts.findOne({ where : {id : req.params.id} })
+  Posts.findOne({ where : { id : req.params.id } })
     .then(function (post) {
+      console.log(post.dataValues);
       res.render('details',
-        {
-          author : post.author,
-          link : post.link,
-          description : post.description
-        });
+        post.dataValues);
     });
 
-  // console.log(req.params.id);
-  // res.render(post.id);
-  // res.send('see a single gallery photo');
 });
 router.put('/:id', function (req, res) {
-  Posts.findOne({ where : {id : req.params.id} })
+  Posts.findOne({ where : { id : req.params.id } })
     .then(function (post) {
-      res.render('details',
-        {
+      if (post) {
+        post.updateAttributes({
           author : post.author,
           link : post.link,
           description : post.description
+        }).success(function(post) {
+          res.send(post);
         });
+      }
     });
 });
 
 router.delete('/:id', function (req, res) {
-  res.send('delete a photo from gallery');
+  Posts.destroy({
+    where : {
+      id : req.params.id
+    }
+  }).then(function(post) {
+    res.json(post);
+  });
 });
 
 module.exports = router;
