@@ -29,29 +29,32 @@
   width: 90%;
   height: 300px;
   display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
   margin: auto;
   border: 2px solid black; }
 
-/* line 37, stdin */
+/* line 39, stdin */
 .button {
   width: 120px;
   text-align: center; }
 
-/* line 42, stdin */
+/* line 44, stdin */
 .descripts {
   color: red;
   width: 90%;
   margin: 10px;
   text-decoration: none; }
 
-/* line 49, stdin */
+/* line 51, stdin */
 .imagecontainer {
   height: 30%;
   margin: auto;
+  box-sizing: border-box;
   display: inline-block;
   width: 30%; }
 
-/* line 56, stdin */
+/* line 59, stdin */
 .auths {
   width: 90%;
   color: green;

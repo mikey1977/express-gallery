@@ -2,7 +2,7 @@ mixin generateImages(galleryimages)
   each galleryimage in galleryimages
     div.imagecontainer
       a(href="/gallery/" + galleryimage.id)
-        img(src= galleryimage.image class="otherImages")
+        img(src= "#{galleryimage.link}" class="otherImages")
         p.descripts= galleryimage.description
         p.auths= galleryimage.author
 

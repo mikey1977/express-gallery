@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
-
+var db = require('./../models');
+var User = db.User;
+var Posts = db.Posts;
 // homepage
 router.get('/', function (req, res) {
   res.send('view a list of gallery photos');
@@ -30,24 +32,32 @@ router.get('/', function (req, res) {
 //   })
 // })
 
+
 router.get('/new', function (req, res) {
-  res.send('see a new photo');
+  res.render('form');
 });
+
+
+//go to new page with form fields
+router.post('/', function (req, res) {
+  Posts.create({
+    author : req.body.author,
+    link : req.body.link,
+    description : req.body.description
+  })
+    .then(function (post) {
+      res.json(post);
+    });
+});
+
+// router.get('/:id/edit', function (req, res) {
+//   res.render('edit');
+// });
 
 // :id can mean anything
 router.get('/:id', function (req, res) {
   res.send('see a single gallery photo');
 });
-
-//go to new page with form fields
-router.post('/gallery', function (req, res) {
-  res.send('create a new gallery photo');
-});
-
-router.get('/:id/edit', function (req, res) {
-  res.render('edit');
-});
-
 router.put('/:id', function (req, res) {
   res.send('update a single photo by id');
 });

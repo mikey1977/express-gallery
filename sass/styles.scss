@@ -1,4 +1,16 @@
-  #title {
+@import "partials/reset";
+@import "partials/clearfix";
+
+$small: "only screen and (max-width: 800px)";
+$large: "only screen and (min-width: 801px)";
+
+// body {
+//   text-align: center;
+//   box-sizing: border-box;
+//   margin: auto;
+// }
+
+#title {
   font-size: 50px;
   display: inline-block;
   color: #736E74;
@@ -26,8 +38,10 @@
 
 .otherImages {
   width: 90%;
-  height: 300px;
+  height: 90%;
   display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
   margin: auto;
   // margin: 10px;
   // margin-top: 20px;
@@ -41,21 +55,35 @@
 
 .descripts {
   color: red;
-  width: 90%;
-  margin: 10px;
-  text-decoration: none;
+  // width: 90%;
+  // margin: 10px;
+  // text-decoration: none;
 }
 
 .imagecontainer {
-  height: 30%;
-  margin: auto;
+
+  box-sizing: border-box;
+  border: 3px solid blue;
   display: inline-block;
-  width: 30%;
+
+  @media #{$small}{
+
+
+  height: 90%;
+  margin: auto;
+  max-width: 90%;
+  min-width: 90%;
+  }
+  @media #{$large}{
+    // height: 30%;
+    max-width: 30%;
+    min-width: 30%;
+  }
 }
 
 .auths {
-  width: 90%;
+  // width: 90%;
   color: green;
-  margin: 10px;
-  text-decoration: none;
+  // margin: 10px;
+  // text-decoration: none;
 }
