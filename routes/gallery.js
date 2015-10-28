@@ -3,6 +3,7 @@ var router = express.Router();
 var db = require('./../models');
 var User = db.User;
 var Posts = db.Posts;
+
 // homepage
 router.get('/', function (req, res) {
   res.send('view a list of gallery photos');
@@ -32,11 +33,9 @@ router.get('/', function (req, res) {
 //   })
 // })
 
-
 router.get('/new', function (req, res) {
   res.render('form');
 });
-
 
 //go to new page with form fields
 router.post('/', function (req, res) {
@@ -56,10 +55,30 @@ router.post('/', function (req, res) {
 
 // :id can mean anything
 router.get('/:id', function (req, res) {
-  res.send('see a single gallery photo');
+  Posts.findOne({ where : {id : req.params.id} })
+    .then(function (post) {
+      res.render('details',
+        {
+          author : post.author,
+          link : post.link,
+          description : post.description
+        });
+    });
+
+  // console.log(req.params.id);
+  // res.render(post.id);
+  // res.send('see a single gallery photo');
 });
 router.put('/:id', function (req, res) {
-  res.send('update a single photo by id');
+  Posts.findOne({ where : {id : req.params.id} })
+    .then(function (post) {
+      res.render('details',
+        {
+          author : post.author,
+          link : post.link,
+          description : post.description
+        });
+    });
 });
 
 router.delete('/:id', function (req, res) {
