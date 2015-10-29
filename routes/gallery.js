@@ -4,8 +4,19 @@ var db = require('./../models');
 var User = db.User;
 var Posts = db.Posts;
 
+var app = express();
+var session = require('express-session');
+var flash = require('connect-flash');
+var passport = require('passport');
+var localStrategy = require('passport-local');
+var jade = require('jade');
+app.set('view engine', 'jade');
+app.set('views', './views');
+app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
 // homepage
-router.get('/', function (req, res) {
+router.get('/', ensureAuthenticated, function (req, res) {
   res.send('view a list of gallery photos');
 });
 
@@ -33,12 +44,12 @@ router.get('/', function (req, res) {
 //   })
 // })
 
-router.get('/new', function (req, res) {
+router.get('/new', ensureAuthenticated, function (req, res) {
   res.render('form');
 });
 
 //go to new page with form fields
-router.post('/', function (req, res) {
+router.post('/', ensureAuthenticated, function (req, res) {
   Posts.create({
     author : req.body.author,
     link : req.body.link,
@@ -54,7 +65,7 @@ router.post('/', function (req, res) {
 // });
 
 // :id can mean anything
-router.get('/:id', function (req, res) {
+router.get('/:id', ensureAuthenticated, function (req, res) {
   Posts.findOne({ where : { id : req.params.id } })
     .then(function (post) {
       console.log(post.dataValues);
@@ -63,7 +74,7 @@ router.get('/:id', function (req, res) {
     });
 
 });
-router.put('/:id', function (req, res) {
+router.put('/:id', ensureAuthenticated, function (req, res) {
   Posts.findOne({ where : { id : req.params.id } })
     .then(function (post) {
       if (post) {
@@ -78,7 +89,7 @@ router.put('/:id', function (req, res) {
     });
 });
 
-router.get('/update/:id', function (req, res) {
+router.get('/update/:id', ensureAuthenticated, function (req, res) {
   Posts.findOne({ where : { id : req.params.id } })
     .then(function (post) {
       res.render('update',
@@ -86,7 +97,7 @@ router.get('/update/:id', function (req, res) {
     });
 });
 
-router.post('/update/:id', function (req, res) {
+router.post('/update/:id', ensureAuthenticated, function (req, res) {
   Posts.update( {
     author : req.body.author,
     link : req.body.link,
@@ -97,7 +108,7 @@ router.post('/update/:id', function (req, res) {
     });
 });
 
-router.delete('/:id', function (req, res) {
+router.delete('/:id', ensureAuthenticated, function (req, res) {
   Posts.destroy({
     where : {
       id : req.params.id
@@ -106,5 +117,10 @@ router.delete('/:id', function (req, res) {
     res.redirect('/');
   });
 });
+
+function ensureAuthenticated(req, res, next) {
+  if (req.isAuthenticated()) { return next(); }
+  res.redirect('/login');
+}
 
 module.exports = router;
