@@ -45,7 +45,7 @@ router.post('/', function (req, res) {
     description : req.body.description
   })
     .then(function (post) {
-      res.json(post);
+      res.redirect('/');
     });
 });
 
@@ -78,13 +78,32 @@ router.put('/:id', function (req, res) {
     });
 });
 
+router.get('/update/:id', function (req, res) {
+  Posts.findOne({ where : { id : req.params.id } })
+    .then(function (post) {
+      res.render('update',
+        post.dataValues);
+    });
+});
+
+router.post('/update/:id', function (req, res) {
+  Posts.update( {
+    author : req.body.author,
+    link : req.body.link,
+    description : req.body.description
+  }, { where : { id : req.params.id } })
+    .then(function (post) {
+      res.redirect('/');
+    });
+});
+
 router.delete('/:id', function (req, res) {
   Posts.destroy({
     where : {
       id : req.params.id
     }
   }).then(function(post) {
-    res.json(post);
+    res.redirect('/');
   });
 });
 

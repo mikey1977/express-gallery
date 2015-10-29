@@ -3,8 +3,8 @@ mixin generateImages(galleryimages)
     div.imagecontainer
       a(href="/gallery/" + galleryimage.id)
         img(src= "#{galleryimage.link}" class="otherImages")
-        p.descripts= galleryimage.description
-        p.auths= galleryimage.author
+        p.descripts= 'description: ' + galleryimage.description
+        p.auths= 'author: ' + galleryimage.author
 
 //- mixin generateImageses(galleryimagerows)
 //-   each galleryimagerow in galleryimagerows
