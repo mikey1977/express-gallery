@@ -23,6 +23,10 @@ block content
   form(method='GET' action='/gallery/new')
     input.button(type='submit' value='Create New Photo')
 
+  div.logoutButton
+    form(action='/logout')
+      input.description(type='submit' value='Log Out')
+
 //- INPUT STATIC IMAGES
   //-   a(href="/gallery/1/edit"): img(src="http://witze.net/architekt.gif" class="otherImages")
 

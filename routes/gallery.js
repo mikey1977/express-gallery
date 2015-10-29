@@ -4,17 +4,6 @@ var db = require('./../models');
 var User = db.User;
 var Posts = db.Posts;
 
-var app = express();
-var session = require('express-session');
-var flash = require('connect-flash');
-var passport = require('passport');
-var localStrategy = require('passport-local');
-var jade = require('jade');
-app.set('view engine', 'jade');
-app.set('views', './views');
-app.use(flash());
-app.use(passport.initialize());
-app.use(passport.session());
 // homepage
 router.get('/', ensureAuthenticated, function (req, res) {
   res.send('view a list of gallery photos');
