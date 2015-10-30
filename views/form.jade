@@ -2,11 +2,18 @@ include ./layouts/mainLayout
 
 block content
 
-  form(name='textInput' method='POST' action='/gallery')
-    input(name='author' placeholder='Author Name')
+  form(name='textInput' method='POST' action='/gallery' class='addNewPhoto')
     br
-    input(name='link' placeholder='Link URL')
+    p.author ENTER NAME
+    input.author(name='author' placeholder='Author Name' style="width: 300px")
     br
-    input(name='description' placeholder='Description')
     br
-    input.button(type='submit' value='New Photos')
+    p.link INPUT IMAGE URL
+    input.link(name='link' placeholder='Link URL' style="width: 300px")
+    br
+    br
+    p.description ENTER DESCRIPTION
+    input.description(name='description' placeholder='Description' style="width: 300px")
+    br
+    br
+    input.button(type='submit' value='New Photos' style="width: 120px")

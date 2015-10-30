@@ -1,5 +1,19 @@
-form(name='textInput' method='POST' action='/gallery/update/#{id}')
-  input.author(name="author" placeholder='Author Name')
-  input.link(name="link" placeholder='Link URL')
-  input.description(name="description" placeholder='Description')
-  input.button(type='submit' value='Update')
+include ./layouts/mainLayout
+
+block content
+
+  form(name='textInput' method='POST' action='/gallery/update/#{id}' class='updatePhoto')
+    br
+    p.author ENTER NAME
+    input.author(name="author" placeholder='Author Name' style="width: 300px")
+    br
+    br
+    p.link INPUT IMAGE URL
+    input.link(name="link" placeholder='Link URL' style="width: 300px")
+    br
+    br
+    p.description ENTER DESCRIPTION
+    input.description(name="description" placeholder='Description' style="width: 300px")
+    br
+    br
+    input.button(type='submit' value='Update' style="width: 120px")

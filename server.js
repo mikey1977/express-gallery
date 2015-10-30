@@ -76,10 +76,6 @@ app.get('/logout', function(req,res) {
   res.redirect('/');
 });
 
-// app.get('/', function(req,res) {
-//   res.send('hello');
-// });
-
 app.get('/secret', ensureAuthenticated, function(req,res) {
   res.send('secret');
 });
@@ -105,7 +101,7 @@ app.post('/users', ensureAuthenticated, function (req, res) {
 //mounting gallery to users
 app.use('/gallery', gallery);
 
-app.get('/', ensureAuthenticated, function (req, res) {
+app.get('/', function (req, res) {
   Posts.findAll()
     .then(function (posts) {
       res.render('index', { galleryimages : posts });
@@ -116,12 +112,6 @@ app.delete('/user/gallery/:id', ensureAuthenticated, function (req, res) {
   res.send('DELETE photo by id');
 });
 
-// var server = app.listen(3000, function() {
-//   var host = server.address().address;
-//   var port = server.address().port;
-// });
-
-
 app.listen(3000, function() {
   db.sequelize.sync();
 });
@@ -131,9 +121,9 @@ var User = {
     var user = {
       id : 1,
       username : opts.username,
-      password : 'my secret password',
+      password : 'a',
       validPassword : function (password) {
-        return (password === 'my secret password');
+        return (password === 'a');
       }
     };
     cb( null, user );

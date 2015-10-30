@@ -4,11 +4,31 @@
 $small: "only screen and (max-width:800px)";
 $large: "only screen and (min-width:801px)";
 
-body {
-  // text-align: center;
-  // box-sizing: border-box;
-  margin: auto;
-}
+$box-shadow: 0 1px 0 #ccc,
+       0 2px 0 #c9c9c9,
+       0 3px 0 #bbb,
+       0 4px 0 #b9b9b9,
+       0 5px 0 #aaa,
+       0 6px 1px rgba(0,0,0,.1),
+       0 0 5px rgba(0,0,0,.1),
+       0 1px 3px rgba(0,0,0,.3),
+       0 3px 5px rgba(0,0,0,.2),
+       0 5px 10px rgba(0,0,0,.25),
+       0 10px 10px rgba(0,0,0,.2),
+       0 20px 20px rgba(0,0,0,.15);
+
+$text-shadow: 0 1px 0 #ccc,
+              0 2px 0 #c9c9c9,
+              0 3px 0 #bbb,
+              0 4px 0 #b9b9b9,
+              0 5px 0 #aaa,
+              0 6px 1px rgba(0,0,0,.1),
+              0 0 5px rgba(0,0,0,.1),
+              0 1px 3px rgba(0,0,0,.3),
+              0 3px 5px rgba(0,0,0,.2),
+              0 5px 10px rgba(0,0,0,.25),
+              0 10px 10px rgba(0,0,0,.2),
+              0 20px 20px rgba(0,0,0,.15);
 
 #title {
   font-size: 50px;
@@ -16,17 +36,30 @@ body {
   color: #736E74;
   float: left;
   margin-left: 100px;
+  margin-top: 30px;
   font-family: "Helvetica";
   font-weight: bold;
+  text-shadow: $text-shadow;
+}
+
+#title.loginTitle {
+  display: block;
+  text-align: center;
+
 }
 
 #words {
-  display: inline-block;
-  width: 400px;
-  color: #736E74;
-  float: right;
-  margin-right: 100px;
-  margin-top: 50px;
+  display: none;
+
+  @media #{$large}{
+    display: inline-block;
+    width: 400px;
+    color: #736E74;
+    float: right;
+    margin-right: 100px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
 }
 
 #mainImage {
@@ -34,59 +67,142 @@ body {
   display: block;
   margin: auto;
   margin-bottom: 30px;
+  box-shadow: $box-shadow;
 }
 
 .button {
   width: 120px;
   text-align: center;
+  border: 2px solid black;
+  font-weight: bold;
+  margin-left: 50px;
+  border-radius: 50px;
+  box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 4px 6px 6px rgba(0,0,0,0.6);
+}
+
+.button.login {
+  margin: auto;
+  font-weight: bold;
 }
 
 .allImages {
-  width: 100%;
-  // box-sizing: border-box;
+  max-width: 100%;
+  min-width: 250px;
+  height: absolute;
+  box-sizing: border-box;
   display: block;
-  margin: 0 auto;
-  // margin-left: auto;
-  // margin-right: auto;
+  padding: 20px;
+  margin-left: 50px;
+
 
   .imagecontainer {
-
-    // box-sizing: border-box;
-    border: 3px solid blue;
-    // display: inline-block;
-
-    .descripts {
-      color: red;
-      margin: auto;
-      height: 90%;
-      // margin: auto;
-      max-width: 90%;
-      min-width: 90%;
-      // width: 90%;
-      // margin: 10px;
-      // text-decoration: none;
-    }
-
-    .auths {
-      // width: 90%;
-      color: green;
-      margin: auto;
-      // margin: 10px;
-      // text-decoration: none;
-    }
-
+    display: block;
+    width: 90%;
+    height: 90%;
+    padding: 10px;
+    margin: 10px;
+    border: 3px solid black;
+    box-shadow: $box-shadow;
 
     @media #{$large}{
-      // height: 30%;
-      // margin: auto;
-      max-width: 30%;
-      min-width: 30%;
+      display: inline-block;
+      margin: 5px;
+      width: 30%;
+    }
+
+    .otherImages {
+      height: 300px;
+      width: 90%;
+      margin: auto;
+      box-shadow: $box-shadow;
+
+      @media #{$large}{
+        height: 300px;
+        margin: auto;
+        display: inline-block;
+        width: 90%;
+      }
     }
   }
 }
 
+.descripts {
+  color: black;
+  font-family: "Trebuchet MS";
+  margin: auto;
+  width: 90%;
+  margin: 10px;
+  text-decoration: none;
+  // text-shadow: $text-shadow;
+}
+
+.auths {
+  width: 90%;
+  color: black;
+  font-family: "Trebuchet MS";
+  margin: auto;
+  margin: 10px;
+  text-decoration: none;
+  // text-shadow: $text-shadow;
+}
+
+.otherImages {
+  width: 100%;
+  height: 100%;
+}
+
+
+
 .logoutButton {
   width: 120px;
   display: block;
-  float: right;
+  margin-bottom: 20px;
+  margin-right: 100px;
+  padding-bottom: 30px;
+  font-weight: bold;
+}
+
+.indy{
+  display: block;
+  width: 500px;
+}
+
+.author {
+  margin-left: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.link {
+  margin-left: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.description {
+  margin-left: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.addNewPhoto {
+  text-align: center;
+  font-weight: bold;
+}
+
+.updatePhoto {
+  text-align: center;
+  font-weight: bold;
+}
+
+.loginButton {
+  text-align: center;
+  margin-top: 100px;
+  font-weight: bold;
+}
+
+.loginText {
+  font-family: "Book Antiqua";
+  font-size: 20px;
+  font-weight: bold;
 }

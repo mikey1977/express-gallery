@@ -1,7 +1,18 @@
+include ./layouts/mainLayout
+
+block content
+  p#title.loginTitle _ARCHITEKT
+  br
 
 
-form(name='textInput' method='POST' action='/login')
-  input.username(name="username" type='username')
-  input.password(name="password" type='password')
-  input.description(type='submit' value='Log In')
-  //- input.button(type='submit' value='Update')
+  form(name='textInput' method='POST' action='/login' class='loginButton')
+    br
+    p.loginText Login to add/edit photos
+    br
+    input.username(name="username" type='username')
+    br
+    br
+    input.password(name="password" type='password')
+    br
+    br
+    input.button.login(type='submit' value='Log In')

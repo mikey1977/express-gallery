@@ -1,62 +1,240 @@
-/* line 1, stdin */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 18, /Users/mikey/DevLeague/express-gallery/sass/partials/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+/* line 28, /Users/mikey/DevLeague/express-gallery/sass/partials/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 31, /Users/mikey/DevLeague/express-gallery/sass/partials/_reset.scss */
+body {
+  line-height: 1; }
+
+/* line 34, /Users/mikey/DevLeague/express-gallery/sass/partials/_reset.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 37, /Users/mikey/DevLeague/express-gallery/sass/partials/_reset.scss */
+blockquote, q {
+  quotes: none; }
+
+/* line 41, /Users/mikey/DevLeague/express-gallery/sass/partials/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 45, /Users/mikey/DevLeague/express-gallery/sass/partials/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 1, /Users/mikey/DevLeague/express-gallery/sass/partials/_clearfix.scss */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0; }
+
+/* line 8, /Users/mikey/DevLeague/express-gallery/sass/partials/_clearfix.scss */
+* html .clearfix {
+  zoom: 1; }
+
+/* IE6 */
+/* line 9, /Users/mikey/DevLeague/express-gallery/sass/partials/_clearfix.scss */
+*:first-child + html .clearfix {
+  zoom: 1; }
+
+/* IE7 */
+/* line 33, stdin */
 #title {
   font-size: 50px;
   display: inline-block;
   color: #736E74;
   float: left;
   margin-left: 100px;
+  margin-top: 30px;
   font-family: "Helvetica";
-  font-weight: bold; }
+  font-weight: bold;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15); }
 
-/* line 11, stdin */
+/* line 45, stdin */
+#title.loginTitle {
+  display: block;
+  text-align: center; }
+
+/* line 51, stdin */
 #words {
-  display: inline-block;
-  width: 400px;
-  color: #736E74;
-  float: right;
-  margin-right: 100px;
-  margin-top: 50px; }
+  display: none; }
+  @media only screen and (min-width: 801px) {
+    /* line 51, stdin */
+    #words {
+      display: inline-block;
+      width: 400px;
+      color: #736E74;
+      float: right;
+      margin-right: 100px;
+      margin-bottom: 30px;
+      margin-top: 30px; } }
 
-/* line 20, stdin */
+/* line 65, stdin */
 #mainImage {
   width: 90%;
   display: block;
   margin: auto;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  box-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15); }
 
-/* line 27, stdin */
-.otherImages {
-  width: 90%;
-  height: 300px;
-  display: inline-block;
-  box-sizing: border-box;
-  text-align: center;
-  margin: auto;
-  border: 2px solid black; }
-
-/* line 39, stdin */
+/* line 73, stdin */
 .button {
   width: 120px;
-  text-align: center; }
+  text-align: center;
+  border: 2px solid black;
+  font-weight: bold;
+  margin-left: 50px;
+  border-radius: 50px;
+  box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 4px 6px 6px rgba(0, 0, 0, 0.6); }
 
-/* line 44, stdin */
+/* line 83, stdin */
+.button.login {
+  margin: auto;
+  font-weight: bold; }
+
+/* line 88, stdin */
+.allImages {
+  max-width: 100%;
+  min-width: 250px;
+  height: absolute;
+  box-sizing: border-box;
+  display: block;
+  padding: 20px;
+  margin-left: 50px; }
+  /* line 98, stdin */
+  .allImages .imagecontainer {
+    display: block;
+    width: 90%;
+    height: 90%;
+    padding: 10px;
+    margin: 10px;
+    border: 3px solid black;
+    box-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15); }
+    @media only screen and (min-width: 801px) {
+      /* line 98, stdin */
+      .allImages .imagecontainer {
+        display: inline-block;
+        margin: 5px;
+        width: 30%; } }
+    /* line 113, stdin */
+    .allImages .imagecontainer .otherImages {
+      height: 300px;
+      width: 90%;
+      margin: auto;
+      box-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15); }
+      @media only screen and (min-width: 801px) {
+        /* line 113, stdin */
+        .allImages .imagecontainer .otherImages {
+          height: 300px;
+          margin: auto;
+          display: inline-block;
+          width: 90%; } }
+
+/* line 129, stdin */
 .descripts {
-  color: red;
+  color: black;
+  font-family: "Trebuchet MS";
+  margin: auto;
   width: 90%;
   margin: 10px;
   text-decoration: none; }
 
-/* line 51, stdin */
-.imagecontainer {
-  height: 30%;
-  margin: auto;
-  box-sizing: border-box;
-  display: inline-block;
-  width: 30%; }
-
-/* line 59, stdin */
+/* line 139, stdin */
 .auths {
   width: 90%;
-  color: green;
+  color: black;
+  font-family: "Trebuchet MS";
+  margin: auto;
   margin: 10px;
   text-decoration: none; }
+
+/* line 149, stdin */
+.otherImages {
+  width: 100%;
+  height: 100%; }
+
+/* line 156, stdin */
+.logoutButton {
+  width: 120px;
+  display: block;
+  margin-bottom: 20px;
+  margin-right: 100px;
+  padding-bottom: 30px;
+  font-weight: bold; }
+
+/* line 165, stdin */
+.indy {
+  display: block;
+  width: 500px; }
+
+/* line 170, stdin */
+.author {
+  margin-left: 50px;
+  text-align: center;
+  font-weight: bold; }
+
+/* line 176, stdin */
+.link {
+  margin-left: 50px;
+  text-align: center;
+  font-weight: bold; }
+
+/* line 182, stdin */
+.description {
+  margin-left: 50px;
+  text-align: center;
+  font-weight: bold; }
+
+/* line 188, stdin */
+.addNewPhoto {
+  text-align: center;
+  font-weight: bold; }
+
+/* line 193, stdin */
+.updatePhoto {
+  text-align: center;
+  font-weight: bold; }
+
+/* line 198, stdin */
+.loginButton {
+  text-align: center;
+  margin-top: 100px;
+  font-weight: bold; }
+
+/* line 204, stdin */
+.loginText {
+  font-family: "Book Antiqua";
+  font-size: 20px;
+  font-weight: bold; }
