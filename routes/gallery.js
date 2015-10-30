@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var db = require('./../models');
-var User = db.User;
+// var User = db.User;
 var Posts = db.Posts;
 
 // homepage

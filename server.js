@@ -108,9 +108,15 @@ app.get('/', function (req, res) {
     });
 });
 
-app.delete('/user/gallery/:id', ensureAuthenticated, function (req, res) {
-  res.send('DELETE photo by id');
-});
+// app.delete('/:id', ensureAuthenticated, function (req, res) {
+//   Posts.destroy({
+//     where : {
+//       id : req.params.id
+//     }
+//   }).then(function(post) {
+//     res.redirect('/');
+//   });
+// });
 
 app.listen(3000, function() {
   db.sequelize.sync();

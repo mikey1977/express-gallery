@@ -5,17 +5,17 @@ $small: "only screen and (max-width:800px)";
 $large: "only screen and (min-width:801px)";
 
 $box-shadow: 0 1px 0 #ccc,
-       0 2px 0 #c9c9c9,
-       0 3px 0 #bbb,
-       0 4px 0 #b9b9b9,
-       0 5px 0 #aaa,
-       0 6px 1px rgba(0,0,0,.1),
-       0 0 5px rgba(0,0,0,.1),
-       0 1px 3px rgba(0,0,0,.3),
-       0 3px 5px rgba(0,0,0,.2),
-       0 5px 10px rgba(0,0,0,.25),
-       0 10px 10px rgba(0,0,0,.2),
-       0 20px 20px rgba(0,0,0,.15);
+             0 2px 0 #c9c9c9,
+             0 3px 0 #bbb,
+             0 4px 0 #b9b9b9,
+             0 5px 0 #aaa,
+             0 6px 1px rgba(0,0,0,.1),
+             0 0 5px rgba(0,0,0,.1),
+             0 1px 3px rgba(0,0,0,.3),
+             0 3px 5px rgba(0,0,0,.2),
+             0 5px 10px rgba(0,0,0,.25),
+             0 10px 10px rgba(0,0,0,.2),
+             0 20px 20px rgba(0,0,0,.15);
 
 $text-shadow: 0 1px 0 #ccc,
               0 2px 0 #c9c9c9,
@@ -30,6 +30,9 @@ $text-shadow: 0 1px 0 #ccc,
               0 10px 10px rgba(0,0,0,.2),
               0 20px 20px rgba(0,0,0,.15);
 
+$font-awesome: "Segoe UI";
+$font-prettycool: "Helvetica Neue";
+
 #title {
   font-size: 50px;
   display: inline-block;
@@ -37,7 +40,7 @@ $text-shadow: 0 1px 0 #ccc,
   float: left;
   margin-left: 100px;
   margin-top: 30px;
-  font-family: "Helvetica";
+  font-family: $font-prettycool;
   font-weight: bold;
   text-shadow: $text-shadow;
 }
@@ -67,7 +70,7 @@ $text-shadow: 0 1px 0 #ccc,
   display: block;
   margin: auto;
   margin-bottom: 30px;
-  box-shadow: $box-shadow;
+  box-shadow: $text-shadow;
 }
 
 .button {
@@ -92,7 +95,7 @@ $text-shadow: 0 1px 0 #ccc,
   box-sizing: border-box;
   display: block;
   padding: 20px;
-  margin-left: 50px;
+  margin-left: 40px;
 
 
   .imagecontainer {
@@ -128,7 +131,7 @@ $text-shadow: 0 1px 0 #ccc,
 
 .descripts {
   color: black;
-  font-family: "Trebuchet MS";
+  font-family: $font-awesome;
   margin: auto;
   width: 90%;
   margin: 10px;
@@ -139,7 +142,7 @@ $text-shadow: 0 1px 0 #ccc,
 .auths {
   width: 90%;
   color: black;
-  font-family: "Trebuchet MS";
+  font-family: $font-awesome;
   margin: auto;
   margin: 10px;
   text-decoration: none;
@@ -159,7 +162,7 @@ $text-shadow: 0 1px 0 #ccc,
   margin-bottom: 20px;
   margin-right: 100px;
   padding-bottom: 30px;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 .indy{
@@ -182,27 +185,27 @@ $text-shadow: 0 1px 0 #ccc,
 .description {
   margin-left: 50px;
   text-align: center;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 .addNewPhoto {
   text-align: center;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 .updatePhoto {
   text-align: center;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 .loginButton {
   text-align: center;
   margin-top: 100px;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 .loginText {
-  font-family: "Book Antiqua";
+  font-family: $font-awesome;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 900;
 }
