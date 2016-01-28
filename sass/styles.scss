@@ -15,7 +15,7 @@ $box-shadow: 0 1px 0 #ccc,
              0 3px 5px rgba(0,0,0,.2),
              0 5px 10px rgba(0,0,0,.25),
              0 10px 10px rgba(0,0,0,.2),
-             0 20px 20px rgba(0,0,0,.15);
+             0 20px 10px rgba(0,0,0,.15);
 
 $text-shadow: 0 1px 0 #ccc,
               0 2px 0 #c9c9c9,
@@ -33,35 +33,51 @@ $text-shadow: 0 1px 0 #ccc,
 $font-awesome: "Segoe UI";
 $font-prettycool: "Helvetica Neue";
 
-#title {
-  font-size: 50px;
-  display: inline-block;
-  color: #736E74;
-  float: left;
-  margin-left: 100px;
-  margin-top: 30px;
-  font-family: $font-prettycool;
-  font-weight: bold;
-  text-shadow: $text-shadow;
-}
-
-#title.loginTitle {
+#textArea {
   display: block;
-  text-align: center;
 
-}
 
-#words {
-  display: none;
-
-  @media #{$large}{
+  #title {
+    width: 45%;
+    font-size: 60px;
+    text-align: center;
     display: inline-block;
-    width: 400px;
     color: #736E74;
-    float: right;
-    margin-right: 100px;
-    margin-bottom: 30px;
+    float: left;
+    margin-left: 5%;
     margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: $font-prettycool;
+    font-weight: bold;
+    text-shadow: $text-shadow;
+
+    @media #{$small}{
+      display: inline-block;
+      width: 90%;
+
+    }
+  }
+
+// #title.loginTitle {
+//   display: block;
+//   text-align: center;
+
+// }
+
+  #words {
+    width: 45%;
+    display: none;
+
+    @media #{$large}{
+      display: inline-block;
+      width: 400px;
+      color: #736E74;
+      float: right;
+      margin-right: 5%;
+      margin-bottom: 30px;
+      margin-top: 30px;
+      margin-left: 30px;
+    }
   }
 }
 
@@ -70,7 +86,7 @@ $font-prettycool: "Helvetica Neue";
   display: block;
   margin: auto;
   margin-bottom: 30px;
-  box-shadow: $text-shadow;
+  box-shadow: $box-shadow;
 }
 
 .button {
@@ -105,7 +121,7 @@ $font-prettycool: "Helvetica Neue";
     padding: 10px;
     margin: 10px;
     border: 3px solid black;
-    box-shadow: $box-shadow;
+    // box-shadow: $box-shadow;
 
     @media #{$large}{
       display: inline-block;
@@ -117,7 +133,7 @@ $font-prettycool: "Helvetica Neue";
       height: 300px;
       width: 90%;
       margin: auto;
-      box-shadow: $box-shadow;
+      // box-shadow: $box-shadow;
 
       @media #{$large}{
         height: 300px;
