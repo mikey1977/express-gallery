@@ -67,6 +67,7 @@ $font-prettycool: "Helvetica Neue";
   #words {
     width: 45%;
     display: none;
+    font-weight: bold;
 
     @media #{$large}{
       display: inline-block;
@@ -75,7 +76,7 @@ $font-prettycool: "Helvetica Neue";
       float: right;
       margin-right: 5%;
       margin-bottom: 30px;
-      margin-top: 30px;
+      margin-top: 45px;
       margin-left: 30px;
     }
   }
@@ -86,7 +87,6 @@ $font-prettycool: "Helvetica Neue";
   display: block;
   margin: auto;
   margin-bottom: 30px;
-  box-shadow: $box-shadow;
 }
 
 .button {
@@ -111,8 +111,8 @@ $font-prettycool: "Helvetica Neue";
   box-sizing: border-box;
   display: block;
   padding: 20px;
-  margin-left: 40px;
-
+  margin: auto;
+  text-align: center;
 
   .imagecontainer {
     display: block;
@@ -120,8 +120,6 @@ $font-prettycool: "Helvetica Neue";
     height: 90%;
     padding: 10px;
     margin: 10px;
-    border: 3px solid black;
-    // box-shadow: $box-shadow;
 
     @media #{$large}{
       display: inline-block;
@@ -131,38 +129,33 @@ $font-prettycool: "Helvetica Neue";
 
     .otherImages {
       height: 300px;
-      width: 90%;
+      width: 300px;
       margin: auto;
-      // box-shadow: $box-shadow;
 
       @media #{$large}{
         height: 300px;
         margin: auto;
         display: inline-block;
-        width: 90%;
+        width: 300px;
       }
     }
   }
 }
 
 .descripts {
-  color: black;
+  color: #736E74;
   font-family: $font-awesome;
+  font-weight: bold;
   margin: auto;
   width: 90%;
-  margin: 10px;
-  text-decoration: none;
-  // text-shadow: $text-shadow;
 }
 
 .auths {
   width: 90%;
-  color: black;
+  color: #736E74;
   font-family: $font-awesome;
   margin: auto;
   margin: 10px;
-  text-decoration: none;
-  // text-shadow: $text-shadow;
 }
 
 .otherImages {
@@ -224,4 +217,8 @@ $font-prettycool: "Helvetica Neue";
   font-family: $font-awesome;
   font-size: 20px;
   font-weight: 900;
+}
+
+a {
+  text-decoration: none;
 }
